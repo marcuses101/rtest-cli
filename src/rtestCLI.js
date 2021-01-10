@@ -8,13 +8,11 @@ export async function cli() {
     const arg = process.argv[2];
     const isDirectory =
       fsSync.existsSync(arg) && (await fs.lstat(arg)).isDirectory();
-    console.log({ isDirectory });
     if (isDirectory) {
       const fileNames = await fs.readdir(arg);
       const jsFiles = fileNames.filter(
         (filename) => filename.slice(-3) === ".js"
       );
-      console.log(jsFiles);
       await Promise.all(
         jsFiles.map(async (fileName) => {
           const componentName = path.basename(fileName, ".js");
