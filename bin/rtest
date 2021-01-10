@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
 require = require('esm')(module /*, options*/);
-require('../src/rtestCLI').cli(process.argv);
+require('../src/rtestCLI').cli();

@@ -2,9 +2,9 @@ import fs from 'fs/promises'
 import path from 'path'
 import testTemplate from "./testTemplate";
 
-export async function cli(arguments){
+export async function cli(){
   try {
-    const arg = arguments[2];
+    const arg = process.argv[2];
     const componentName = path.basename(arg,'.js');
     const testPath = path.dirname(arg) + '/'  + componentName +'.test.js'
     const readFile = await fs.readFile(arg,'utf-8');
