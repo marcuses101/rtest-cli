@@ -24,6 +24,7 @@ export async function cli() {
           const isRouterTest = readFile.includes("react-router-dom");
           const testFile = testTemplate(componentName, isRouterTest);
           await fs.writeFile(testPath, testFile);
+          console.log(componentName + " test created")
         })
       );
       return;
