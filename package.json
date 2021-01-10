@@ -1,0 +1,29 @@
+{
+  "name": "rtest",
+  "version": "1.0.0",
+  "description": "a CLI to bootstrap new projects",
+  "main": "src/index.js",
+  "bin": {
+    "rtest": "bin/rtest"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "rtest",
+    "react",
+    "enzyme"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "arg": "^4.1.3",
+    "esm": "^3.2.25",
+    "fs": "0.0.1-security",
+    "inquirer": "^7.3.3"
+  }
+}
